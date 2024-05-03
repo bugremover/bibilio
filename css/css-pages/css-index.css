@@ -1,0 +1,315 @@
+.hero-section {
+  height: 100%;
+}
+.title {
+  font-style: italic;
+}
+.b1 {
+  color: #d2042d;
+}
+.b2 {
+  color: #556b2f;
+}
+.img-div {
+  width: 18rem;
+  height: 26rem;
+}
+.img-div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/* .slide-sec {
+  background: #0d0907;
+  border-radius: 30px;
+} */
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: absolute;
+  width: 50%;
+  height: 0.5%;
+  left: 25%;
+  border-radius: 20px;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: rgb(55 65 81);
+  border-radius: 20px;
+}
+p {
+  line-height: 1.5rem;
+}
+.circle {
+  border-radius: 50%;
+}
+.circle ion-icon {
+  color: #0d0907;
+  font-weight: 800;
+}
+.services {
+  height: 100%;
+  text-align: center;
+}
+.services .shadow {
+  box-shadow: 3px 3px 20px #1a202c;
+}
+
+.best-selling-section {
+  height: 100%;
+}
+
+/* .best-book-heading:hover {
+  cursor: pointer;
+  border: 2px;
+  border-bottom: #4a5568;
+
+} */
+
+.best-book-heading {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 0px;
+}
+
+.best-book-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4a5568;
+  border-radius: 30px;
+  transition: width 0.5s ease-in-out; /* Animation duration and timing function */
+}
+
+.best-book-heading:hover::after {
+  width: 60%; /* Expand the width to 100% on hover */
+}
+
+.next-btn:hover {
+  color: #a0aec0;
+  transition: 0.2s ease-in-out;
+  font-size: medium;
+}
+
+.best-book-text {
+  text-align: justify;
+  text-indent: 0.5rem;
+}
+
+.card-img {
+  width: 15rem;
+  height: 23rem;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 30px;
+}
+
+.bg-mate-black {
+  background-image: linear-gradient(to bottom, #010101, #070612, #0e1010);
+}
+
+.card {
+  box-shadow: 0.3px 0.3px 10px #1a202c;
+  transition: box-shadow 0.3s ease; /* Add transition to the box-shadow property */
+}
+
+.card:hover {
+  box-shadow: 4px 4px 20px #1a202c; /* Change the box-shadow on hover */
+}
+
+/* .card-option {
+  position: absolute;
+  width: 280px;
+  background-image: linear-gradient(to bottom, #010101, #070612);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
+  border-radius: 1rem;
+  bottom: -3rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+} */
+
+/* .card-option {
+  position: absolute;
+  width: 280px;
+  background-image: linear-gradient(to bottom, #010101, #070612);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
+  border-radius: 1rem;
+  bottom: -3rem; 
+  left: 50%;
+  transform: translateX(-50%); 
+  opacity: 0;
+  transition: opacity 0.3s;
+} */
+.card-option {
+  position: absolute;
+  width: 280px;
+  /* background-image: linear-gradient(to bottom, #010101, #070612); */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 0.2px rgba(255, 255, 255, 0.25);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
+  border-radius: 1rem;
+  bottom: -1rem; /* Adjusted bottom value */
+  transform: translateX(-50%); /* Center horizontally */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card-option ion-icon {
+  font-size: larger;
+}
+
+.card-main {
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* Align items to bottom of .card-main */
+  justify-content: center; /* Center items horizontally */
+}
+
+.card-main:hover .card-option {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.card-main:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card-main:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+.card-main:not(:hover) .card-option {
+  animation: remove-data 1s forwards;
+}
+
+/* @keyframes show-data {
+  50% {
+    transform: translate(-10rem);
+  }
+  100% {
+    transform: translate(-7rem);
+  }
+} */
+@keyframes show-data {
+  0% {
+    bottom: -3rem; /* Start from bottom */
+    transform: translateY(100%);
+  }
+  100% {
+    bottom: 0; /* Move to the original position */
+    transform: translateY(0);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    bottom: 0; /* Start from original position */
+    transform: translateY(0);
+  }
+  50% {
+    bottom: -3rem; /* Move back to bottom */
+    transform: translateY(100%);
+  }
+  100% {
+    bottom: -3rem; /* Stay at bottom */
+    transform: translateY(100%);
+  }
+}
+
+/* @keyframes remove-data {
+  0% {
+    transform: translate(-7rem);
+  }
+  50% {
+    transform: translate(-10rem);
+  }
+  100% {
+    transform: translate(0.5rem);
+  }
+} */
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+ion-icon[name="heart-outline"]:hover {
+  display: none; /* Hide the heart-outline icon */
+}
+
+ion-icon[name="heart-outline"]:hover + ion-icon[name="heart"] {
+  display: inline-block; /* Show the heart icon */
+}
+
+.book-heading {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 0px;
+}
+
+.book-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4a5568;
+  border-radius: 30px;
+  transition: width 0.5s ease-in-out; /* Animation duration and timing function */
+}
+
+.book-heading:hover::after {
+  width: 20%; /* Expand the width to 100% on hover */
+}
+
+.footer-heading {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 0px;
+}
+
+.footer-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4a5568;
+  border-radius: 30px;
+  transition: width 0.5s ease-in-out; /* Animation duration and timing function */
+}
+
+.footer-heading:hover::after {
+  width: 60%; /* Expand the width to 100% on hover */
+}

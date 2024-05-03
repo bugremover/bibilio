@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("https://fonts.cdnfonts.com/css/sf-pro-display") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "SF Pro Display", sans-serif;
+  background-color: rgb(0 0 0);
+  color: rgb(203 213 225);
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+nav a {
+  text-decoration: none;
+  color: rgb(203 213 225);
+}
+
+ion-icon {
+  color: rgb(203 213 225);
+  font-weight: 700;
+}
+
+nav .logo {
+  color: rgb(226 232 240);
+  font-family: cursive;
+  letter-spacing: 0.2em;
+}
+
+.font-semibold {
+  font-weight: 600;
+  position: relative;
+}
+.font-semibold::after {
+  content: ""; /* Add content for the pseudo-element */
+  position: absolute; /* Position the pseudo-element absolutely */
+  left: 50%; /* Move the dot to the center horizontally */
+  bottom: -7px; /* Adjust the distance of the dot from the text */
+  width: 3px; /* Width of the dot */
+  height: 3px; /* Height of the dot */
+  background-color: rgb(203 213 225); /* Color of the dot */
+  border-radius: 50%; /* Make the dot round */
+  transform: translateX(-50%); /* Center the dot horizontally */
+}
+
+.search {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #161616;
+  box-shadow: 0 4px 24px hsla(222, 68%, 12%, 0.1);
+  border-radius: 4rem;
+  padding: 10px;
+  overflow: hidden;
+  transition: width 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
+}
+
+.search-inp {
+  background-color: #1a202c;
+  border: none;
+  outline: none;
+  width: 12rem;
+  height: 100%;
+  border-radius: 4rem;
+  padding-left: 14px;
+  padding-right: 50px;
+  font-family: monospace;
+  font-size: small;
+  font-weight: 700;
+  color: #a0aec0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s;
+}
+
+.search-inp:-webkit-autofill {
+  box-shadow: 0 0 0 100px #0d0907 inset;
+}
+
+/* .search-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #0d0907;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+} */
+.search-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #0d0907;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; /* Align vertically */
+  right: 5px;
+  transform: translateY(-50%); /* Move up by half of its height */
+  display: flex; /* Use flexbox to center icon vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  cursor: pointer;
+}
+.search-icon,
+.close-icon {
+  color: #a0aec0;
+  font-size: 1rem;
+  position: absolute;
+}
+.close-icon {
+  opacity: 0;
+}
+
+.show-search {
+  width: 100%;
+}
+
+.show-search .search-inp {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.show-search .search-icon {
+  opacity: 0;
+}
+.show-search .close-icon {
+  opacity: 1;
+}
