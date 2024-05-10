@@ -27,7 +27,7 @@
         <div class="grid grid-cols-3 py-5 items-center">
           <div class="text-sm">
             <ul class="flex gap-8 justify-center items-center">
-              <li class="font-semibold">Home</li>
+              <li class="font-semibold-dot">Home</li>
               <li><a href="#shop">Shop</a></li>
               <li>About Us</li>
             </ul>
@@ -189,8 +189,10 @@
       <section
         class="best-selling-section flex justify-center items-center p-7"
       >
-        <div class="grid grid-cols-2 bg-gray-950 rounded-3xl p-6 py-12 mx-20">
-          <div class="flex justify-center items-center">
+        <div
+          class="best-selling-books grid grid-cols-2 bg-gray-950 rounded-3xl p-6 py-12 mx-20"
+        >
+          <!-- <div class="flex justify-center items-center">
             <div class="img-div">
               <img src="img/Animal_Farm-transformed.jpeg" alt="err" />
             </div>
@@ -219,16 +221,28 @@
                 >
               </a>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
       <section id="shop">
         <h2 class="text-2xl text-gray-400 ml-20 mt-24 mb-10 book-heading">
           Books
         </h2>
-
-        <div class="mx-20 p-12 rounded-3xl bg-gray-950 grid grid-cols-3 gap-12">
-          <div class="card-main">
+        <div class="flex justify-end">
+          <select
+            class="filter w-40 py-2 px-3 mr-5 text-base rounded-xl bg-gray-900 text-gray-400 mx-20"
+          >
+            <option value="" selected>select</option>
+            <option value="atoz">a-z</option>
+            <option value="price">Price</option>
+            <option value="ratings">Ratings</option>
+          </select>
+        </div>
+        <div
+          id="books"
+          class="mx-20 p-12 rounded-3xl bg-gray-950 grid grid-cols-3 gap-12"
+        >
+          <!-- <div class="card-main">
             <div
               class="card p-6 rounded-2xl bg-mate-black flex flex-col justify-center items-center"
             >
@@ -385,7 +399,7 @@
                 ><ion-icon name="bag-outline"></ion-icon
               ></span>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
@@ -418,7 +432,7 @@
               </h3>
               <ul>
                 <li class="mb-2 text-sm">
-                  <a href="#" class="text-gray-700">FAQ</a>
+                  <a href="../pages/faqPage.html" class="text-gray-700">FAQ</a>
                 </li>
                 <li class="mb-2 text-sm">
                   <a href="#" class="text-gray-700">Shipping</a>
@@ -458,6 +472,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/indexPage.js"></script>
+    <script src="js/indexPage.js" type="module"></script>
   </body>
 </html>

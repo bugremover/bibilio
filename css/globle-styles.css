@@ -40,11 +40,11 @@ nav .logo {
   letter-spacing: 0.2em;
 }
 
-.font-semibold {
+.font-semibold-dot {
   font-weight: 600;
   position: relative;
 }
-.font-semibold::after {
+.font-semibold-dot::after {
   content: ""; /* Add content for the pseudo-element */
   position: absolute; /* Position the pseudo-element absolutely */
   left: 50%; /* Move the dot to the center horizontally */

@@ -1,0 +1,25 @@
+.img-div {
+  width: 18rem;
+  height: 26rem;
+}
+
+.star-ratings-container {
+  display: inline-block;
+}
+.star-container {
+  color: #ffd700; /* Set star color */
+}
+
+.star {
+  font-size: 24px; /* Increase star size */
+}
+
+.full-star,
+.half-star,
+.empty-star {
+  color: #ffd700; /* Set star color */
+}
+
+.add-to-basket-btn {
+  border: none;
+}

@@ -1,0 +1,41 @@
+/* Style for FAQ items */
+
+.faq-container {
+  margin-top: 20px;
+}
+
+.faq-question {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+}
+
+/* Style for active (open) FAQ item */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-heading {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 0px;
+}
+
+.faq-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4a5568;
+  border-radius: 30px;
+  transition: width 0.5s ease-in-out; /* Animation duration and timing function */
+}
+
+.faq-heading:hover::after {
+  width: 40%; /* Expand the width to 100% on hover */
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>book</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="../css/globle-styles.css" />
+    <link rel="stylesheet" href="../css/css-pages/css-bookDetails.css" />
+    <link rel="stylesheet" href="../css/css-pages/css-index.css" />
+    <link rel="stylesheet" href="../css/utilities.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="grid grid-cols-3 py-5 items-center">
+          <div class="text-sm">
+            <ul class="flex gap-8 justify-center items-center">
+              <li class="font-semibold">Home</li>
+              <li><a href="#shop">Shop</a></li>
+              <li>About Us</li>
+            </ul>
+          </div>
+          <div class="flex justify-center">
+            <span class="logo font-bold text-lg">BIBILIO</span>
+          </div>
+          <div class="flex justify-center gap-10 items-center">
+            <span>
+              <form action="#" class="search" id="search-bar">
+                <input
+                  type="search"
+                  placeholder="Type something..."
+                  class="search-inp"
+                />
+                <div class="search-btn" id="search-btn">
+                  <ion-icon
+                    name="search-outline"
+                    class="search-icon"
+                  ></ion-icon>
+                  <ion-icon name="close-outline" class="close-icon"></ion-icon>
+                </div>
+              </form>
+            </span>
+            <span><ion-icon name="heart-outline"></ion-icon></span>
+            <span><ion-icon name="bag-outline"></ion-icon></span>
+            <span><ion-icon name="person-outline"></ion-icon></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="grid grid-cols-2">
+          <div class="flex justify-center items-center">
+            <div class="img-div">
+              <img src="../img/Animal_Farm-transformed.jpeg" alt="animalfarm" />
+            </div>
+          </div>
+          <div>
+            <h1>Animal Farm</h1>
+            <h4>₹200</h4>
+            <div>
+              <div id="starRatings" class="star-ratings-container">
+                <!-- Star ratings will be dynamically generated here -->
+              </div>
+              <span>2 customers review</span>
+            </div>
+            <h4>
+              Animal Farm by George Orwell is an allegorical work of fiction.
+              Depicting rising revolt among the animals, who wish to take over
+              the humans, the author wrote one of the best satire of the era.
+              Animals, who live in Mr. Jones farm are tired of serving human and
+              find it very exploiting as they use animals for all their needs.
+              Rebellion starts on the day when Mr. Jones forgets to feed the
+              animals. Under the charge of two pigs: Napoleon and Snowball,
+              animals thus plan to invade humans and take over the farm.
+            </h4>
+            <div class="flex items-center">
+              <div class="flex gap-8 items-center">
+                <div
+                  class="w-10 h-10 bg-gray-900 p-5 flex justify-center items-center rounded-full text-sm font-bold"
+                >
+                  -
+                </div>
+                <h5>1</h5>
+                <div
+                  class="w-10 h-10 bg-gray-900 p-5 flex justify-center items-center rounded-full text-sm font-bold"
+                >
+                  +
+                </div>
+              </div>
+              <div>
+                <button
+                  class="add-to-basket-btn px-5 py-2 bg-gray-900 text-gray-200 rounded-xl text-sm"
+                >
+                  Add to the Basket
+                </button>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <span
+                ><ion-icon name="heart-outline" class="text-xl"></ion-icon
+              ></span>
+              <span class="text-base font-semibold">Add to Wishlist</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../js/navSearch.js"></script>
+    <script type="module" src="../js/bookDetailsPage.js"></script>
+  </body>
+</html>

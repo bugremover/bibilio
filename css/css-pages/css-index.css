@@ -313,3 +313,7 @@ ion-icon[name="heart-outline"]:hover + ion-icon[name="heart"] {
 .footer-heading:hover::after {
   width: 60%; /* Expand the width to 100% on hover */
 }
+
+.filter {
+  border: none;
+}
